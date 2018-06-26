@@ -11,7 +11,7 @@
 <body>
     <div class="container" style="width:50%;margin:25px auto">
         <h3 class="text-center" style="text-decoration:underline;margin-bottom:30px">COMPANY FORM</h3>
-        {!! Form::open() !!}
+        {!! Form::open(['action'=>'Companycontroller@store','method'=>'Post']) !!}
         <h4  style="text-decoration:underline;margin-bottom:20px">Company Details</h4>
         <div class="form-group">
              {{ Form::label('CompanyName', 'Company Name')}}
@@ -24,7 +24,7 @@
         </div>
         <div class="form-group">
              {{ Form::label('IncorporationStatus', 'Incorporation Status')}}
-             {{ Form::select('Incorporation Status', ['Business','Controlled','Cooperative','Foreign','Non-Profit','Private','Professional','Public'],null,['placeholder'=>'Select a Status','required' => 'required'])}}
+             {{ Form::select('IncorporationStatus', ['Business','Controlled','Cooperative','Foreign','Non-Profit','Private','Professional','Public'],null,['placeholder'=>'Select a Status','required' => 'required'])}}
         </div>
         <div class="form-group">
              {{ Form::label('Scale', 'Scale')}}
@@ -61,7 +61,7 @@
         </div>
         <div class="form-group">
              {{ Form::label('Pno', 'Phone Number')}}
-             {{ Form::text('Pno', '', ['class' => 'form-control','placeholder'=>'Phone Number with ISD code','required' => 'required','minlength'=>8])}}
+             {{ Form::text('Pno', '', ['class' => 'form-control','placeholder'=>'Phone Number with ISD/STD code','required' => 'required','minlength'=>8])}}
         </div>
          <div class="form-group">
              {{ Form::label('Fno', 'Fax Number')}}

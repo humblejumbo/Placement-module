@@ -20,15 +20,15 @@
         
         <div class="form-group float-right">
              {{ Form::label('Sector', 'Sector')}}
-             {{ Form::select('Sector', ['Agriculture','Chemical','Computer','Construction','Energy','Information','Manufacture','Telecommunications'],null,['placeholder'=>'Select a Sector','required' => 'required'])}}
+             {{ Form::select('Sector', ['Agriculture'=>'Agriculture','Chemical'=>'Chemical','Computer'=>'Computer','Construction'=>'Construction','Energy'=>'Energy','Information'=>'Information','Manufacture'=>'Manufacture','Telecommunications'=>'Telecommunications'],null,['placeholder'=>'Select a Sector','required' => 'required'])}}
         </div>
         <div class="form-group">
              {{ Form::label('IncorporationStatus', 'Incorporation Status')}}
-             {{ Form::select('IncorporationStatus', ['Business','Controlled','Cooperative','Foreign','Non-Profit','Private','Professional','Public'],null,['placeholder'=>'Select a Status','required' => 'required'])}}
+             {{ Form::select('IncorporationStatus', ['Business'=>'Business','Controlled'=>'Controlled','Cooperative'=>'Cooperative','Foreign'=>'Foreign','Non-Profit'=>'Non-Profit','Private'=>'Private','Professional'=>'Professional','Public'=>'Public'],null,['placeholder'=>'Select a Status','required' => 'required'])}}
         </div>
         <div class="form-group">
              {{ Form::label('Scale', 'Scale')}}
-             {{ Form::select('Scale', ['Large','Medium','Small'],null,['placeholder'=>'Select a Scale','required' => 'required'])}}
+             {{ Form::select('Scale', ['Large'=>'Large','Medium'=>'Medium','Small'=>'Small'],null,['placeholder'=>'Select a Scale','required' => 'required'])}}
         </div>
         
        
@@ -68,8 +68,8 @@
              {{ Form::text('Fno', '', ['class' => 'form-control','placeholder'=>'Fax Number'])}}
         </div>
           <div class="form-group">
-             {{ Form::label('WebSite', 'Web Site')}}
-             {{ Form::text('WebSite', '', ['class' => 'form-control','placeholder'=>'Web Site'])}}
+             {{ Form::label('Website', 'Web Site')}}
+             {{ Form::text('Website', '', ['class' => 'form-control','placeholder'=>'Web Site'])}}
         </div>
         
         <div class="form-group">

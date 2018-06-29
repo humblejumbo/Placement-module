@@ -24,6 +24,7 @@ class Companycontroller extends Controller
      */
     public function create()
     {
+        
         return view('company-form');
     }
 
@@ -43,6 +44,7 @@ class Companycontroller extends Controller
         $company->Address=$request->input('Address');
         $company->Pin=$request->input('Pin');
         $company->Country=$request->input('Country');
+        $company->State=$request->input('State');
         $company->District=$request->input('District');
         $company->Pno=$request->input('Pno');
         $company->Fno=$request->input('Fno');

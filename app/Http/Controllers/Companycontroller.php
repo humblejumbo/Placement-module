@@ -39,8 +39,8 @@ class Companycontroller extends Controller
     {
         $company = new Company;
         $company->CompanyName=$request->input('CompanyName');
-        $company->IncorporationStatus=$request->input('Sector');
-        $company->Sector=$request->input('IncorporationStatus');
+        $company->IncorporationStatus=$request->input('IncorporationStatus');
+        $company->Sector=$request->input('Sector');
         $company->Scale=$request->input('Scale');
         $company->Address=$request->input('Address');
         $company->Pin=$request->input('Pin');
@@ -53,7 +53,7 @@ class Companycontroller extends Controller
         $company->Website=$request->input('Website');
         $company->save();
 
-        return redirect('/');
+        return redirect('/companies');
     }
 
     /**
@@ -75,7 +75,8 @@ class Companycontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $company=Company::find($id);
+        return view('company-form-edit',compact('company'));
     }
 
     /**
@@ -87,7 +88,23 @@ class Companycontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $company = Company::find($id);
+        $company->CompanyName=$request->input('CompanyName');
+        $company->IncorporationStatus=$request->input('IncorporationStatus');
+        $company->Sector=$request->input('Sector');
+        $company->Scale=$request->input('Scale');
+        $company->Address=$request->input('Address');
+        $company->Pin=$request->input('Pin');
+        $company->Country=$request->input('Country');
+        $company->State=$request->input('State');
+        $company->District=$request->input('District');
+        $company->Pno=$request->input('Pno');
+        $company->Fno=$request->input('Fno');
+        $company->Email=$request->input('Email');
+        $company->Website=$request->input('Website');
+        $company->save();
+
+        return redirect('/companies');
     }
 
     /**
